@@ -40,8 +40,8 @@ export function Assignments(props: Props) {
   const showAssignments = () => {
     if (assignments != null) {
       return (
-      assignments.map(assignment => 
-        <Assignment assignment={assignment} deleteAssignment={deleteAssignment} setIsDone={setIsDone}/>
+      assignments.map((assignment, key) => 
+        <Assignment assignment={assignment} deleteAssignment={deleteAssignment} setIsDone={setIsDone} key={key}/>
       )
       )
     }
